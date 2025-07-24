@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+   <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+   <div class="cursor-dot"></div>
+<div class="cursor-circle"></div>
+
+<div class="search-overlay" id="searchOverlay">
+  <button class="close-btn" id="closeSearch">&times;</button>
+  <div class="search-container">
+    <input type="text" placeholder="Search..." />
+  </div>
+</div>
+
+
+
+<body>
+<div class="top-header">
+  <div class="top-left">
+    <i class="fas fa-clock"></i> 09:00 am - 06:00 pm
+  </div>
+  <div class="top-right">
+    <span>Follow us</span>
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-x-twitter"></i>
+    <i class="fab fa-youtube"></i>
+    <i class="fab fa-linkedin-in"></i>
+    
+  </div>
+</div>
+
+<header>
+  <nav class="nav-left">
+    <div class="nav-item">
+      <a href="#" class="nav-link">Home</a>
+      <div class="dropdown">
+        <a href="#">Home Style 1</a>
+        <a href="#">Home Style 2</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#" class="nav-link">About Us</a>
+      <div class="dropdown">
+        <a href="#">Our Story</a>
+        <a href="#">Team</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#" class="nav-link">Shop</a>
+      <div class="dropdown">
+        <a href="#">All Products</a>
+        <a href="#">Categories</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#" class="nav-link">Blog</a>
+      <div class="dropdown">
+        <a href="#">Latest Posts</a>
+        <a href="#">Categories</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#" class="nav-link">Pages</a>
+      <div class="dropdown">
+        <a href="#">FAQ</a>
+        <a href="#">Pricing</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#" class="nav-link">Contact Us</a>
+      <div class="dropdown">
+        <a href="#">Email</a>
+        <a href="#">Location</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="nav-right">     
+    <i class="fas fa-search" id="searchIcon"></i>
+  
+    
+<div class="cart-wrapper">
+  <i class="fas fa-shopping-cart" id="cartIcon"></i>
+
+  <div class="cart-dropdown">
+    <div class="cart-item">
+      <img src="https://via.placeholder.com/50" alt="Item">
+      <div class="item-info">
+        <p>Product Name</p>
+        <small>$2000</small>
+      </div>
+    </div>
+    <div class="cart-item">
+      <img src="https://via.placeholder.com/50" alt="Item">
+      <div class="item-info">
+        <p>Product Name</p>
+        <small>$3000</small>
+      </div>
+    </div>
+    <div class="cart-item">
+      <img src="https://via.placeholder.com/50" alt="Item">
+      <div class="item-info">
+        <p>Product Name</p>
+        <small>$5000</small>
+      </div>
+    </div>
+
+    <div class="cart-total">
+      <p>Total:</p>
+      <strong>$10000</strong>
+    </div>
+
+    <div class="cart-buttons">
+      <button class="view-btn">View Cart</button>
+      <button class="checkout-btn">Checkout</button>
+    </div>
+  </div>
+</div>
+   <i class="fas fa-bars" id="hamburger"></i>
+
+
+
+<!-- Overlay and Side Card -->
+<div id="overlay" class="overlay">
+  <div class="side-card">
+    <span id="closeBtn" class="close-btn">&times;</span>
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+    </ul>
+  </div>
+</div>
+
+
+  </div>
+<!-- <div id="overlay" class="overlay">
+  <div class="side-card">
+    <span id="closeBtn" class="close-btn">❌</span>
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div></div> -->
+
+
+
+</header>
+
+
+<div class="popular-section">
+  <h5>BEST FOOD</h5>
+  <h2>Popular Food Items</h2>
+  <div class="card-row">
+    <div class="carousel-card">
+      <img src="https://via.placeholder.com/100" alt="Food 1" />
+      <h4>Spicy Burger</h4>
+      <p>Delicious grilled burger</p>
+      <span>$12.99</span>
+    </div>
+    <div class="carousel-card">
+      <img src="https://via.placeholder.com/100" alt="Food 2" />
+      <h4>Cheesy Pizza</h4>
+      <p>Loaded with mozzarella</p>
+      <span>$9.99</span>
+    </div>
+    <div class="carousel-card">
+      <img src="https://via.placeholder.com/100" alt="Food 3" />
+      <h4>Chicken Wrap</h4>
+      <p>Healthy and tasty</p>
+      <span>$8.99</span>
+    </div>
+    <div class="carousel-card">
+      <img src="https://via.placeholder.com/100" alt="Food 4" />
+      <h4>French Fries</h4>
+      <p>Crispy and golden</p>
+      <span>$4.99</span>
+    </div>
+  </div>
+</div>
+<!-- 
+
+TOOK FROM CHATGPT
+
+<section class="popular-section">
+  <h2 class="popular-title">Popular Food Items</h2>
+  <div class="carousel-container">
+    <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
+    <div class="carousel-track">
+      <div class="carousel-card">
+        <img src="https://via.placeholder.com/150" alt="Food 1">
+        <h4>Spicy Burger</h4>
+        <p>Delicious grilled burger</p>
+        <span>$12.99</span>
+      </div>
+      <div class="carousel-card">
+        <img src="https://via.placeholder.com/150" alt="Food 2">
+        <h4>Cheesy Pizza</h4>
+        <p>Loaded with mozzarella</p>
+        <span>$9.99</span>
+      </div>
+      <div class="carousel-card">
+        <img src="https://via.placeholder.com/150" alt="Food 3">
+        <h4>Chicken Wrap</h4>
+        <p>Healthy and tasty</p>
+        <span>$8.99</span>
+      </div>
+      <div class="carousel-card">
+        <img src="https://via.placeholder.com/150" alt="Food 4">
+        <h4>French Fries</h4>
+        <p>Crispy and golden</p>
+        <span>$4.99</span>
+      </div>
+    </div>
+    </marquee>
+  </div>
+</section> -->
+
+
+
+</body>
+</html>
+ 
+ 
