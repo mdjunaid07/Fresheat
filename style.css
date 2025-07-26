@@ -463,8 +463,9 @@
 
  .popular-section{
       margin: 0;
+      padding-top: 20px;
       font-family: Arial, sans-serif;
-      background-color: #fdfaf6;
+      background-color:  #F4F1EA;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -678,8 +679,9 @@ span{
  .offer-section{
       box-sizing: border-box;
       margin: 0;
-      padding: 0;
+      padding: 19px;
       font-family: sans-serif;
+      background-color:  #F4F1EA;
     }
 
     .offers {
@@ -788,3 +790,108 @@ span{
         align-items: center;
       }
     }
+
+.aboutus-sec {
+  width: 1498px;
+  height: 544px;
+  margin: auto;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutus-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  margin: 40px;
+}
+.text-box{
+  width: 600px;
+}
+.text-box h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text-box p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+}
+.btn{
+  padding-top: 10px;
+}
+
+.fixed-img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 500px;
+  width: 400px;
+  z-index: 1;
+}
+
+.left-img {
+  left: 0;
+}
+
+.right-img {
+  right: 0;
+}
+
+.rotate-img-left {
+  width: 350px;
+  height: 340px;
+  animation: spin 10s linear infinite;
+ margin-right: 13px;
+}
+.rotate-img-right {
+  width: 350px;
+  height: 350px;
+  animation: spin 10s linear infinite;
+ margin-left: 13px;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hide all images when screen smaller than 1498x544 */
+@media (max-width: 1497px), (max-height: 543px) {
+  .fixed-img,
+  .rotate-img {
+    display: none;
+  }
+
+  .aboutus-sec {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .text-box h1 {
+    font-size: 2rem;
+  }
+
+  .text-box p {
+    font-size: 1rem;
+  }
+
+  .aboutus-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
