@@ -1573,16 +1573,19 @@ span {
   margin: auto;
   gap: 50px;
 }
-.img-left{
-    margin-left: -93px;
+
+.img-left {
+  margin-left: -93px;
 }
+
 .img-left img {
   margin-right: 113px;
   margin-left: 20px;
   width: 650px;
   height: 613px;
   /* object-fit: cover; */
-  padding-left: -10px; /* You can adjust this */
+  padding-left: -10px;
+  /* You can adjust this */
 }
 
 .timer-right {
@@ -1601,7 +1604,8 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Vertically center text + timer */
+  justify-content: center;
+  /* Vertically center text + timer */
   color: white;
   max-width: 500px;
 }
@@ -1616,7 +1620,7 @@ span {
   margin: 0;
   color: #ff9900;
   letter-spacing: 2px;
-   font-weight: bold;
+  font-weight: bold;
 }
 
 .timer-text h3 {
@@ -1634,7 +1638,7 @@ span {
 .box {
   text-align: center;
   width: 60px;
-  
+
 }
 
 .box h1 {
@@ -1647,4 +1651,131 @@ span {
 .box p {
   font-size: 14px;
   margin: 5px 0 0;
+}
+
+
+
+
+
+.chef-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f8f5f0;
+}
+
+.chef-section h3 {
+  color: #f26522;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.chef-section h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.chef-cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.chef-card {
+  background: rgb(237, 233, 233);
+  border-radius: 40px 40px 0px 0px;
+  padding-top: 100px;
+  /* leave space for image overlap */
+  width: 365px;
+  height:235px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 190px;
+  /* optional: move card down */
+}
+.chef-text{
+  margin-top: 30px;
+  
+  font-size: 17px;
+}
+.chef-text h2{
+  font-size: large;
+  font-weight: bold;
+}
+.img-wrapper {
+  width: 300px;
+  position: absolute;
+  top: -200px;
+  /* negative value to pull image out of card */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.img-wrapper img {
+  width: 310px;
+  /* adjust as needed */
+  height: 297px;
+  /* border-radius: 50%; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.share-btn {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f26522;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.share-btn:hover {
+  background: #d30f0f;
+}
+
+.social-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.social-icons a {
+  background: white;
+  color: #333;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 14px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease;
+}
+
+.share-btn:hover .social-icons {
+  opacity: 1;
+  pointer-events: auto;
+  top: 0.1px;
+}
+
+.social-icons a:hover {
+  background: #ff0000;
 }
