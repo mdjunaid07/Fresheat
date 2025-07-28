@@ -144,6 +144,43 @@ setInterval(moveCards, 4000); // Move every 4 seconds
 
 
 
+// Check if there's already a saved countdown start time
+let startTime = localStorage.getItem("countdownStartTime");
 
+// If not, set a new random countdown time (1–5 days from now)
+if (!startTime) {
+  const now = new Date();
+  const randomSeconds = Math.floor(Math.random() * (5 * 24 * 60 * 60)); // up to 5 days
+  const targetTime = new Date(now.getTime() + randomSeconds * 1000);
+  startTime = targetTime.getTime();
+  localStorage.setItem("countdownStartTime", startTime);
+} else {
+  startTime = parseInt(startTime);
+}
 
-  
+function updateCountdown() {
+  const now = new Date().getTime();
+  let distance = startTime - now;
+
+  // If countdown ends, set a new random one
+  if (distance < 0) {
+    localStorage.removeItem("countdownStartTime");
+    location.reload(); // reload to reset
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("days").textContent = String(days).padStart(2, "0");
+  document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+  document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+  document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+}
+
+// Run every second
+setInterval(updateCountdown, 1000);
+updateCountdown(); // Initial call
+
