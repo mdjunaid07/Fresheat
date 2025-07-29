@@ -184,3 +184,43 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown(); // Initial call
 
+
+
+const scrollBtn = document.getElementById("scrollToTopBtn");
+
+  // Show button only after scrolling down 100px
+  window.onscroll = () => {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+
+  // Scroll to top on click
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+    const header = document.querySelector("header");
+  const placeholder = document.getElementById("stickyPlaceholder");
+  const headerTopOffset = header.offsetTop;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > headerTopOffset) {
+      if (!header.classList.contains("sticky")) {
+        header.classList.add("sticky");
+        placeholder.style.height = `${header.offsetHeight}px`;
+        placeholder.style.display = "block";
+      }
+    } else {
+      if (header.classList.contains("sticky")) {
+        header.classList.remove("sticky");
+        placeholder.style.height = "0";
+        placeholder.style.display = "none";
+      }
+    }
+  }); 
